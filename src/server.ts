@@ -1,16 +1,12 @@
 import express from 'express';
+import cors from 'cors';
+import routes from './routes'
+import path from "path";
 
 const app = express();
+app.use(cors());
+app.use(express.json());
+app.use(routes);
 
-//Map the users route
-app.get('/users', (request, response) => {
-    console.log('Listagem de usuários');
-
-    //Send simple text
-    //response.send("Hello World!");
-
-    //Returns a JSON object or array of objects
-    response.json([{"name": "Murilo"}, {"name": "Gilda"}, {"name": "Leonardo"}, {"name" : "Lucia"}, {"name":"Paulo"}])
-});
-
+app.use('/uploads/images', express.static(path.resolve(__dirname, '..', 'uploads', 'images')));
 app.listen(3333);
