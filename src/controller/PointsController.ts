@@ -68,7 +68,7 @@ class PointsController {
 
         const serializedPoint = {
             ...point,
-            image_url: 'http://192.168.15.23:3333/uploads/point-images/' + point.image,
+            image_url: 'https://nlw-ecoleta-api.herokuapp.com/uploads/point-images/' + point.image,
         };
 
         return response.json(
@@ -96,7 +96,7 @@ class PointsController {
         const serializedPoints = points.map(point => {
             return {
                 ...point,
-                image_url: 'http://192.168.15.23:3333/uploads/point-images/' + point.image,
+                image_url: 'https://nlw-ecoleta-api.herokuapp.com/uploads/point-images/' + point.image,
             };
         });
         return response.json(serializedPoints);
