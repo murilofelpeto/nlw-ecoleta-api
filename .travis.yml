@@ -8,5 +8,4 @@ deploy:
   api_key:
     secure: "${api_key}"
   on:
-    tags: true
-    all_branches: true
+    branch: master
