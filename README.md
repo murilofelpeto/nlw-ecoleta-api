@@ -1,4 +1,4 @@
-# Next level week -> Ecoleta project
+# Next level week -> Ecoleta project [![Build Status](https://travis-ci.org/murilofelpeto/nlw-ecoleta-api.svg?branch=master)](https://travis-ci.org/murilofelpeto/nlw-ecoleta-api)
 
 ## Commands used
     `npm init -y -> start a simple node project`
