@@ -6,6 +6,6 @@ script: true
 deploy:
   provider: heroku
   api_key:
-    secure: "${api-key}"
+    secure: ${HEROKU_SECRET}
   on:
     branch: master
