@@ -6,6 +6,6 @@ script: true
 deploy:
   provider: heroku
   api_key:
-    secure: "${HEROKU_SECRET}"
+    secure: "L92k5iY3ocxTHhjJ0L6TD0BT1w/UbBujr6VYLJ02qHMsZZQD3am6Y+xd1j47Q+YjGPGnActC0aFuy+BtqOP4McGuFnsksSLLWKGx3IclxX5wjKd8wz9S8av93o2OLWZ90YpDtQutEVMUln1TXEHUeTO0KNMwJsJyu1h7aIJ2Qr7lDplAQOK/Q+2bSpN/eTczEJzrNjxSC9yvlu88e8lcdWmPHld1RhF/Vjyo3WqqpNhpcKTGjET7uIUgndzNZKh7IqkpNBgxk4HpiSTNexxse5c1t7/6Cqna4cPnvGNLeDlx+/4/wA6cfUlz18VbEDqN2ZXXVX9CrrTaPmeKn2LG2hXA+RFg66cHj/HMXzClAZ2EN/sYBp0Po85lNirO/aQYSD6i/AI3F1+SwjIXigiEQ98vOxtcOqZ1kFoeTRfEOO8w+PGr4XBTv2oYYEXfBWHqZpNgRsdc2mBjSrmWOREHsuarR+2OeOH64LfNRoigey4YLK/1p6aBlupVSMe4jqfyUzhaYJCVWgCLuj4Q/E/RrioCnORVfKhH9z4cI8BG9DA/kDJz+lGjBl/2fmbxzhLiaB+MFla9GNf7Q0VFLQZ3Lyl5G2hg9PCyLWUeWgNZwSqzLv572JnxWvPbOWTL+f0FkLA/9Otowm4z+fD79QRAFgCrOIoA1KMS49fJmr9ht8c="
   on:
     branch: master
