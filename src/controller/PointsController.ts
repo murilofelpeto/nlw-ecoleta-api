@@ -18,7 +18,7 @@ class PointsController {
         //TRX is a transaction, if one of those queries fail, the others won't execute
         const trx = await knex.transaction();
         const point = {
-            image: 'https://images.unsplash.com/photo-1589255625209-d6fd05b59133?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=400&q=60',
+            image: request.file.filename,
             name,
             email,
             whatsapp,
@@ -31,12 +31,15 @@ class PointsController {
 
         const point_id = pointsID[0];
 
-        const pointItems = items.map((item_id: number) =>{
-            return {
-                item_id,
-                point_id
-            };
-        })
+        const pointItems = items
+            .split(',')
+            .map((item: string) => Number(item.trim()))
+            .map((item_id: number) =>{
+                return {
+                    item_id,
+                    point_id
+                };
+            })
         await trx('point_items').insert(pointItems)
 
         //Insert everything on database
@@ -63,9 +66,14 @@ class PointsController {
             .where('point_items.point_id', id)
             .select('items.title');
 
+        const serializedPoint = {
+            ...point,
+            image_url: 'http://192.168.15.23:3333/uploads/point-images/' + point.image,
+        };
+
         return response.json(
             {
-                point,
+                point: serializedPoint,
                 items
             }
         );
@@ -85,7 +93,13 @@ class PointsController {
             .distinct()
             .select('points.*');
 
-        return response.json(points);
+        const serializedPoints = points.map(point => {
+            return {
+                ...point,
+                image_url: 'http://192.168.15.23:3333/uploads/point-images/' + point.image,
+            };
+        });
+        return response.json(serializedPoints);
     }
 };
 
