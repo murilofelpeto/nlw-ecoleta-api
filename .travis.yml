@@ -9,11 +9,11 @@ deploy:
   on:
     branch: master
   run:
-    - "yarn build"
-    - "yarn install"
-    - "yarn postinstall"
-    - "yarn knex:migrate"
-    - "yarn knex:seed"
+    - "npm run-script build"
+    - "npm install"
+    - "npm run-script postinstall"
+    - "npm run-script knex:migrate"
+    - "npm run-script knex:seed"
 
 notifications:
   email: false
