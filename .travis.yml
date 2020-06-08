@@ -11,6 +11,7 @@ deploy:
   run:
     - "yarn knex:migrate"
     - "yarn knex:seed"
+    - "npm start"
 
 notifications:
   email: false
