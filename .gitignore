@@ -105,3 +105,15 @@ dist
 
 .idea
 /package-lock.json
+/src/database/migrations/00_create_points.js
+/src/database/migrations/01_create_items.js
+/src/database/migrations/02_create_point_items.js
+/src/database/connection.js
+/src/database/seeds/create_items.js
+/src/controller/ItemController.js
+/knexfile.js
+/src/config/multer.js
+/src/controller/PointsController.js
+/src/routes.js
+/src/server.js
+/src/server-old.js
