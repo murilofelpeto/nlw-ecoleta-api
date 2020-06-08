@@ -13,5 +13,6 @@ app.use('/uploads/images', express.static(path.resolve(__dirname, '..', 'uploads
 app.use('/uploads/point-images', express.static(path.resolve(__dirname, '..', 'uploads', 'point-images')));
 
 app.use(errors());
-var port = process.env.PORT || 8080;
+
+const port = process.env.PORT || 3333;
 app.listen(port);
