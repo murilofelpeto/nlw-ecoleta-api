@@ -2,10 +2,6 @@ language: node_js
 node_js:
   - 12.17.0
 
-before_script:
-  - npm run setup
-  - npm run build
-
 deploy:
   provider: heroku
   api_key:
